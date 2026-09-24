@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>L'amour Café | Meireles, Fortaleza</title>
+<meta name="description" content="L'amour Café: cafés especiais, croissants, danish e croque madame em três salões, a 450 metros da Beira-Mar. Rua Silva Jatahy, 935, Meireles, Fortaleza.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;0,6..96,700;1,6..96,500&family=Jost:wght@400;500&display=swap">
+<style>
+  :root {
+    color-scheme: light;
+    --ground: #F6EAE7;
+    --paper: #FFF8F6;
+    --ink: #2B0E14;
+    --muted: #74565A;
+    --line: #E4CFCB;
+    --wine: #7A1C2C;
+    --wine-ink: #FFF3F1;
+    --gold: #A6823B;
+    --display: "Bodoni Moda", "Didot", "Georgia", serif;
+    --body: "Jost", "Segoe UI", system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  [hidden] { display: none !important; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body { background: var(--ground); color: var(--ink); font-family: var(--body); font-size: 1.0625rem; line-height: 1.65; }
+  a { color: inherit; }
+  img { max-width: 100%; display: block; }
+  :focus-visible { outline: 2px solid var(--wine); outline-offset: 3px; }
+  h1, h2, h3 { font-family: var(--display); font-weight: 500; line-height: 1.05; text-wrap: balance; }
+  .wrap { max-width: 1140px; margin-inline: auto; padding-inline: 24px; }
+
+  .preview-bar { background: var(--wine); color: var(--wine-ink); text-align: center; font-size: .88rem; padding: 8px 16px; line-height: 1.4; }
+
+  .top { position: sticky; top: 0; z-index: 10; background: color-mix(in srgb, var(--ground) 94%, transparent); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+  .top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 14px; }
+  .logo { font-family: var(--display); font-style: italic; font-size: 1.6rem; text-decoration: none; color: var(--wine); }
+  .top nav { display: flex; align-items: center; gap: 26px; }
+  .top nav a { text-decoration: none; color: var(--muted); font-size: .98rem; }
+  .top nav a:hover { color: var(--ink); }
+  .btn { display: inline-block; text-decoration: none; font-weight: 500; font-size: 1rem; letter-spacing: .01em; padding: 12px 24px; border-radius: 2px; background: var(--wine); color: var(--wine-ink); border: 1px solid var(--wine); }
+  .btn:hover { filter: brightness(1.12); }
+  .btn-line { background: transparent; color: var(--wine); }
+  .btn-line:hover { background: var(--wine); color: var(--wine-ink); filter: none; }
+  .top nav .btn { color: var(--wine-ink); padding: 8px 16px; font-size: .95rem; }
+  .menu-toggle { display: none; background: none; border: 1px solid var(--wine); color: var(--wine); border-radius: 2px; padding: 7px 14px; font: inherit; font-size: .95rem; cursor: pointer; }
+  @media (max-width: 760px) {
+    .menu-toggle { display: inline-block; }
+    .top nav { position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; align-items: stretch; gap: 0; background: var(--ground); border-bottom: 1px solid var(--line); padding: 8px 24px 20px; }
+    .top nav a { padding-block: 12px; border-bottom: 1px solid var(--line); font-size: 1.05rem; }
+    .top nav .btn { margin-top: 16px; text-align: center; border-bottom: 1px solid var(--wine); padding: 12px; }
+  }
+
+  .hero { display: grid; grid-template-columns: 1fr; gap: 44px; padding-block: 56px 80px; }
+  @media (min-width: 940px) { .hero { grid-template-columns: 7fr 5fr; align-items: center; padding-block: 80px 110px; } }
+  .since { font-family: var(--display); font-style: italic; color: var(--gold); font-size: 1.15rem; margin-bottom: 14px; }
+  .hero h1 { font-size: clamp(2.8rem, 7vw, 5.4rem); letter-spacing: -.01em; margin-bottom: 24px; }
+  .hero h1 em { color: var(--wine); }
+  .hero .lede { color: var(--muted); font-size: 1.18rem; max-width: 30em; margin-bottom: 32px; }
+  .actions { display: flex; flex-wrap: wrap; gap: 12px; }
+
+  /* Moldura dourada, como os quadros do salão */
+  .frame { background: var(--paper); padding: 14px; border: 1px solid var(--gold); box-shadow: 0 0 0 6px var(--ground), 0 0 0 7px var(--gold); }
+  .frame img { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; }
+  .hero .frame { max-width: 420px; justify-self: center; width: 100%; }
+
+  section.block { padding-block: 88px; border-top: 1px solid var(--line); }
+  .block h2.title { font-size: clamp(2.2rem, 4.8vw, 3.4rem); margin-bottom: 14px; }
+  .block .intro { color: var(--muted); max-width: 38em; margin-bottom: 40px; }
+
+  .gallery { list-style: none; display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px 20px; }
+  @media (min-width: 820px) { .gallery { gap: 32px; max-width: 900px; margin-inline: auto; } }
+  .gallery .frame { padding: 10px; }
+  .gallery .frame img { aspect-ratio: 3 / 4; }
+  .gallery .wide { grid-column: 1 / -1; }
+  .gallery .wide img { aspect-ratio: 480 / 230; }
+  .credit { margin-top: 28px; font-size: .85rem; color: var(--muted); }
+
+  .tabs { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 32px; border-bottom: 1px solid var(--line); }
+  .tabs button { font: inherit; font-size: 1rem; cursor: pointer; padding: 10px 14px; background: none; color: var(--muted); border: 0; border-bottom: 2px solid transparent; margin-bottom: -1px; }
+  .tabs button:hover { color: var(--ink); }
+  .tabs button[aria-selected="true"] { color: var(--wine); border-bottom-color: var(--wine); }
+  .dishes { list-style: none; display: grid; grid-template-columns: 1fr; gap: 0 56px; }
+  @media (min-width: 820px) { .dishes { grid-template-columns: 1fr 1fr; } }
+  .dishes li { padding-block: 18px; border-bottom: 1px dotted var(--line); }
+  .dishes h3 { font-size: 1.45rem; margin-bottom: 4px; }
+  .dishes p { color: var(--muted); max-width: 30em; }
+  .menu-note { margin-top: 26px; font-size: .95rem; color: var(--muted); }
+
+  .rooms { list-style: none; display: grid; grid-template-columns: 1fr; gap: 20px; }
+  @media (min-width: 820px) { .rooms { grid-template-columns: repeat(3, 1fr); } }
+  .rooms li { background: var(--paper); border: 1px solid var(--line); padding: 28px 24px; text-align: center; }
+  .rooms h3 { font-size: 1.7rem; font-style: italic; color: var(--wine); margin-bottom: 8px; }
+  .rooms p { color: var(--muted); }
+  .rooms-cta { margin-top: 32px; }
+
+  .story { display: grid; grid-template-columns: 1fr; gap: 36px; }
+  @media (min-width: 900px) { .story { grid-template-columns: 5fr 4fr; gap: 64px; } }
+  .story p { color: var(--muted); max-width: 34em; }
+  .story p + p { margin-top: 14px; }
+  .quote { font-family: var(--display); font-style: italic; font-size: clamp(1.6rem, 3vw, 2.2rem); line-height: 1.25; color: var(--wine); border-left: 2px solid var(--gold); padding-left: 24px; align-self: center; }
+
+  .visit { display: grid; grid-template-columns: 1fr; gap: 40px; }
+  @media (min-width: 900px) { .visit { grid-template-columns: 1fr 1fr; gap: 64px; } }
+  .address { font-family: var(--display); font-size: clamp(1.7rem, 3.4vw, 2.4rem); line-height: 1.15; margin-bottom: 14px; }
+  .phone { color: var(--muted); margin-bottom: 22px; }
+  .phone a { color: var(--wine); font-weight: 500; text-underline-offset: 4px; }
+  .hours { width: 100%; border-collapse: collapse; }
+  .hours caption { text-align: left; font-family: var(--display); font-style: italic; color: var(--gold); font-size: 1.2rem; margin-bottom: 6px; }
+  .hours th, .hours td { text-align: left; padding: 12px 0; border-bottom: 1px dotted var(--line); font-weight: 400; }
+  .hours th { color: var(--muted); padding-right: 16px; white-space: nowrap; }
+  .hours tr.today th, .hours tr.today td { color: var(--wine); font-weight: 500; }
+  .status { margin-top: 14px; color: var(--muted); }
+  .status b { color: var(--ink); font-weight: 500; }
+  .map { margin-top: 48px; border: 1px solid var(--gold); padding: 8px; background: var(--paper); }
+  .map iframe { display: block; width: 100%; height: clamp(280px, 45vw, 420px); border: 0; }
+
+  footer { border-top: 1px solid var(--line); padding-block: 30px 44px; color: var(--muted); font-size: .92rem; }
+  footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; }
+  footer .logo { font-size: 1.3rem; }
+  @media (max-width: 480px) { .wrap { padding-inline: 16px; } .actions .btn { flex: 1 1 auto; text-align: center; } .gallery { gap: 22px 14px; } }
+</style>
+</head>
+<body>
+  <div class="preview-bar">Proposta de site para o L'amour Café, criada por Juan Filho. Aguardando aprovação.</div>
+  <header class="top">
+    <div class="wrap">
+      <a class="logo" href="#inicio">L'amour Café</a>
+      <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
+      <nav id="nav" aria-label="Seções">
+        <a href="#cardapio">Cardápio</a>
+        <a href="#saloes">Salões</a>
+        <a href="#historia">História</a>
+        <a href="#visite">Visite</a>
+        <a class="btn" href="https://wa.me/5585991592711?text=Quero%20reservar%20uma%20mesa" target="_blank" rel="noopener">Reservar</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="inicio">
+    <div class="wrap hero">
+      <div>
+        <p class="since">desde 2023</p>
+        <h1>Café com <em>amor</em>, a 450 metros da Beira-Mar.</h1>
+        <p class="lede">Cafés especiais, croissants, danish e croque madame, numa cafeteria inspirada nos cafés de Paris e de Buenos Aires, no Meireles.</p>
+        <div class="actions">
+          <a class="btn" href="https://wa.me/5585991592711?text=Quero%20reservar%20uma%20mesa" target="_blank" rel="noopener">Reservar pelo WhatsApp</a>
+          <a class="btn btn-line" href="#cardapio">Ver o cardápio</a>
+        </div>
+      </div>
+      <div class="frame"><img src="fotos/latte.jpg" alt="Leite vaporizado sendo despejado sobre o café numa xícara" width="360" height="640"></div>
+    </div>
+
+    <section class="block" aria-label="Fotos do L'amour Café">
+      <div class="wrap">
+        <ul class="gallery">
+          <li class="frame wide"><img src="fotos/salao.jpg" alt="Salão com teto vermelho, parede com painel verde, vasos brancos e quadros" width="480" height="230" loading="lazy"></li>
+          <li class="frame"><img src="fotos/croissant.jpg" alt="Croissant recheado sendo cortado com garfo e faca" width="360" height="640" loading="lazy"></li>
+          <li class="frame"><img src="fotos/folhado.jpg" alt="Folhado dourado com recheio e cobertura desfiada" width="360" height="640" loading="lazy"></li>
+        </ul>
+        <p class="credit">Fotos: <a href="https://www.instagram.com/lamourcafeoficial/" target="_blank" rel="noopener">@lamourcafeoficial</a></p>
+      </div>
+    </section>
+
+    <section id="cardapio" class="block">
+      <div class="wrap">
+        <h2 class="title">Cardápio</h2>
+        <p class="intro">Uma seleção do cardápio da casa. Toda bebida quente tem opção gelada, e o leite pode ser trocado por leite vegetal de aveia.</p>
+        <div class="tabs" role="tablist" aria-label="Partes do cardápio">
+          <button role="tab" id="t1" aria-controls="c1" aria-selected="true">Cafés especiais</button>
+          <button role="tab" id="t2" aria-controls="c2" aria-selected="false" tabindex="-1">Geladas</button>
+          <button role="tab" id="t3" aria-controls="c3" aria-selected="false" tabindex="-1">Salgados</button>
+          <button role="tab" id="t4" aria-controls="c4" aria-selected="false" tabindex="-1">Doces</button>
+        </div>
+        <div role="tabpanel" id="c1" aria-labelledby="t1">
+          <ul class="dishes">
+            <li><h3>Café coado V60</h3><p>Café especial coado na hora, em 150 ml ou 300 ml para dividir.</p></li>
+            <li><h3>Espresso</h3><p>35 ml de café especial, acompanhado de água com gás.</p></li>
+            <li><h3>Capuccino L'amour</h3><p>Capuccino cremoso com leite vaporizado e cacau em pó.</p></li>
+            <li><h3>Flat white</h3><p>Espresso duplo e leite vaporizado.</p></li>
+            <li><h3>Café mocha</h3><p>Espresso, leite vaporizado e calda de chocolate 50% cacau ou de caramelo.</p></li>
+            <li><h3>Chocolate quente cremoso</h3><p>Chocolate encorpado com leite vaporizado.</p></li>
+          </ul>
+        </div>
+        <div role="tabpanel" id="c2" aria-labelledby="t2" hidden>
+          <ul class="dishes">
+            <li><h3>Orange coffee</h3><p>Suco de laranja, espresso duplo e gelo.</p></li>
+            <li><h3>Iced latte caramelo</h3><p>Xarope de caramelo, leite e espresso.</p></li>
+            <li><h3>Frappé de pistache</h3><p>Sorvete, leite, pistache, espresso opcional e chantilly.</p></li>
+            <li><h3>Affogato</h3><p>Sorvete com chocolate quente ou capuccino, chantilly e cobertura.</p></li>
+            <li><h3>Milkshakes</h3><p>Oreo, morango, Ovomaltine, chocolate nobre ou Ninho com Nutella.</p></li>
+            <li><h3>Sucos e sodas italianas</h3><p>Laranja, maracujá, abacaxi com hortelã; sodas de maçã verde e tangerina.</p></li>
+          </ul>
+        </div>
+        <div role="tabpanel" id="c3" aria-labelledby="t3" hidden>
+          <ul class="dishes">
+            <li><h3>Croque madame</h3><p>Brioche crocante com peru, molho branco e ovo.</p></li>
+            <li><h3>Croissants</h3><p>Do tradicional ao de brie com geleia, carne do sol com coalho ou camarão com especiarias.</p></li>
+            <li><h3>Danish</h3><p>Caprese, brie com geleia de pimenta, alho-poró ou camarão com limão-siciliano.</p></li>
+            <li><h3>Crepes e crepiocas</h3><p>Marguerita, camarão, frango ou queijo com tomate.</p></li>
+            <li><h3>Pão de queijo gourmet</h3><p>Receita mineira, recheado com provolone e queijo minas, ou com carne do sol.</p></li>
+            <li><h3>Tapiocas</h3><p>Carne do sol com coalho, frango com requeijão ou queijo coalho crocante.</p></li>
+          </ul>
+        </div>
+        <div role="tabpanel" id="c4" aria-labelledby="t4" hidden>
+          <ul class="dishes">
+            <li><h3>Bolo chocolatudo</h3><p>Chocolate meio amargo, ganache e calda de chocolate.</p></li>
+            <li><h3>Cheesecake</h3><p>De frutas vermelhas ou de pistache com castanhas.</p></li>
+            <li><h3>Pavlova</h3><p>Merengue suíço, brigadeiro branco e geleia artesanal.</p></li>
+            <li><h3>Croissant de pistache com morangos</h3><p>Creme de pistache e morangos frescos.</p></li>
+            <li><h3>Torta de limão</h3><p>Mousse de limão e merengue.</p></li>
+            <li><h3>Brownie com sorvete</h3><p>Chocolate nobre com sorvete.</p></li>
+          </ul>
+        </div>
+        <p class="menu-note">Descrições do cardápio da casa. Os valores atuais estão no cardápio do L'amour.</p>
+      </div>
+    </section>
+
+    <section id="saloes" class="block">
+      <div class="wrap">
+        <h2 class="title">Três salões para reservar</h2>
+        <p class="intro">Para um café a dois, um aniversário ou uma reunião, escolha o espaço que combina com o seu momento.</p>
+        <ul class="rooms">
+          <li><h3>Salão Principal</h3><p>Mesas no salão principal.</p></li>
+          <li><h3>Espaço Garden</h3><p>Cercado de verde.</p></li>
+          <li><h3>Espaço Rouge</h3><p>O salão vermelho.</p></li>
+        </ul>
+        <div class="rooms-cta"><a class="btn" href="https://wa.me/5585991592711?text=Quero%20reservar%20uma%20mesa" target="_blank" rel="noopener">Reservar um salão</a></div>
+      </div>
+    </section>
+
+    <section id="historia" class="block">
+      <div class="wrap story">
+        <div>
+          <h2 class="title">Nossa história</h2>
+          <p>O L'amour Café nasceu da vontade de Lucas Braga de empreender. Formado em Direito, ele via no café mais do que uma bebida: um ritual, um convite à pausa e à conexão.</p>
+          <p>Depois de meses de estudo, cursos e treinamentos, a cafeteria abriu as portas em dezembro de 2023, pensada como um refúgio urbano onde qualidade, estética e afeto caminham juntos.</p>
+          <p>A casa é pet friendly, com um espaço onde os cachorros ficam por perto enquanto os tutores comem.</p>
+        </div>
+        <p class="quote">Aqui, o café é feito com técnica. O ambiente, com alma. E cada cliente, recebido com amor.</p>
+      </div>
+    </section>
+
+    <section id="visite" class="block">
+      <div class="wrap visit">
+        <div>
+          <h2 class="title">Visite</h2>
+          <p class="address">Rua Silva Jatahy, 935<br>Meireles, Fortaleza, CE</p>
+          <p class="phone">Reservas pelo WhatsApp: <a href="https://wa.me/5585991592711" target="_blank" rel="noopener">(85) 99159-2711</a></p>
+          <div class="actions">
+            <a class="btn" href="https://wa.me/5585991592711?text=Quero%20reservar%20uma%20mesa" target="_blank" rel="noopener">Reservar pelo WhatsApp</a>
+            <a class="btn btn-line" href="https://www.google.com/maps/dir/?api=1&destination=L%27amour+Caf%C3%A9%2C+Rua+Silva+Jatahy%2C+935%2C+Meireles%2C+Fortaleza+-+CE" target="_blank" rel="noopener">Como chegar</a>
+          </div>
+        </div>
+        <div>
+          <table class="hours">
+            <caption>Horários</caption>
+            <tbody id="hours-body"></tbody>
+          </table>
+          <p class="status" id="status" aria-live="polite"></p>
+        </div>
+      </div>
+      <div class="wrap">
+        <div class="map"><iframe title="Mapa com a localização do L'amour Café" src="https://www.google.com/maps?q=L%27amour+Caf%C3%A9,+Rua+Silva+Jatahy,+935,+Meireles,+Fortaleza+-+CE&output=embed" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="wrap"><span class="logo">L'amour Café</span><span>Rua Silva Jatahy, 935, Meireles, Fortaleza</span></div></footer>
+
+  <script>
+    var HOURS = { 0: [[450, 1170]], 1: [], 2: [[780, 1230]], 3: [[780, 1230]], 4: [[780, 1230]], 5: [[780, 1230]], 6: [[450, 1170]] };
+    var DAYS = ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"];
+  </script>
+  <script src="site.js"></script>
+</body>
+</html>
